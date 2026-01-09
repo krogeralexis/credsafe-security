@@ -1,7 +1,8 @@
 MVP CredSafe
 - [ ] Registro de usuario
 - [ ] Login / Logout
-- [ ] Evaluación de contraseña
-- [ ] Generación de reporte
+- [ ] Almacenamiento seguro de credenciales (hash)
+- [ ] Evaluación de seguridad de contraseña
+- [ ] Generación de reporte de seguridad
 - [ ] Historial de reportes
 - [ ] Recomendaciones básicas
