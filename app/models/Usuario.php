@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+=======
+<?php
+
+>>>>>>> 42149af3b92ae19b50b875591ee4af7955b91936
 class Usuario {
     private $db;
 
@@ -21,6 +26,7 @@ class Usuario {
             ':pass'  => $hash
         ]);
     }
+<<<<<<< HEAD
 
     // --- NUEVOS MÉTODOS ---
 
@@ -39,4 +45,6 @@ class Usuario {
             ':res' => $resultado
         ]);
     }
+=======
+>>>>>>> 42149af3b92ae19b50b875591ee4af7955b91936
 }

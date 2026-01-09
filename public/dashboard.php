@@ -1,5 +1,10 @@
 <?php
 require_once __DIR__ . '/../app/middlewares/authMiddleware.php';
+<<<<<<< HEAD
+=======
+
+// check autenticacion (logueado)
+>>>>>>> 42149af3b92ae19b50b875591ee4af7955b91936
 checkAuth(); 
 ?>
 
@@ -7,6 +12,7 @@ checkAuth();
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CredSafe - Dashboard</title>
     <style>
@@ -78,6 +84,15 @@ checkAuth();
         .logout-btn:hover { color: #ff4d4d; }
 
         hr { border: 0; border-top: 1px solid #e2e8f0; margin: 1.5rem 0; }
+=======
+    <title>CredSafe - Dashboard</title>
+    <style>
+        body { font-family: sans-serif; background: #f0f2f5; margin: 0; }
+        nav { background: #1e293b; color: white; padding: 1rem; display: flex; justify-content: space-between; }
+        .container { padding: 2rem; }
+        .card { background: white; padding: 2rem; border-radius: 8px; shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .logout-btn { color: #ff4d4d; text-decoration: none; font-weight: bold; }
+>>>>>>> 42149af3b92ae19b50b875591ee4af7955b91936
     </style>
 </head>
 <body>
@@ -91,6 +106,7 @@ checkAuth();
     <div class="card">
         <h1>¡Bienvenido de nuevo!</h1>
         <p>Has ingresado con el correo: <strong><?php echo htmlspecialchars($_SESSION['user_email']); ?></strong></p>
+<<<<<<< HEAD
         
         <hr>
         
@@ -107,6 +123,14 @@ checkAuth();
                 Historial de Reportes
             </a>
         </div>
+=======
+        <hr>
+        <h3>Tus Herramientas</h3>
+        <ul>
+            <li>Ver historial de Reportes</li>
+            <li>Evaluar Contraseña</li>
+        </ul>
+>>>>>>> 42149af3b92ae19b50b875591ee4af7955b91936
     </div>
 </div>
 
