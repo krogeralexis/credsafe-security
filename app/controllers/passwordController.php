@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['user_id'])) {
     
     // 4. Guardar en las tablas 'reporte' y 'detallereporte'
     // Pasamos el ID del usuario de la sesión y el array con resultados
-    $guardadoExitoso = $evaluador->guardarReporteCompleto($_SESSION['user_id'], $analisis);
+    $guardadoExitoso = $evaluador->guardarReporteCompleto($_SESSION['user_id'], $analisis, $pass);
     
     // 5. Preparar recomendaciones para la URL (para mostrar en la vista)
     // Extraemos solo el texto de 'rec' de cada detalle encontrado
@@ -32,10 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['user_id'])) {
     // Agregamos un flag de éxito de guardado opcional
     $status = $guardadoExitoso ? "saved" : "error_db";
     
-    header("Location: ../../public/evaluador.php?puntos={$analisis['score']}&recs={$recsEncoded}&status={$status}");
+    header("Location: /credsafe/app/views/evaluador.php?puntos={$analisis['score']}&recs={$recsEncoded}&status={$status}");
     exit();
 } else {
     // Si intentan entrar directo al archivo sin POST o sesión
-    header("Location: ../../public/index.php");
+    header("Location: /credsafe/app/views/index.php");
     exit();
 }

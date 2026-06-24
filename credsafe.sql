@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 09-01-2026 a las 20:15:59
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
+-- Host: localhost
+-- Generation Time: Jun 24, 2026 at 11:29 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `credsafe`
+-- Database: `credsafe`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `detallereporte`
+-- Table structure for table `detallereporte`
 --
 
 CREATE TABLE `detallereporte` (
@@ -36,20 +36,43 @@ CREATE TABLE `detallereporte` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `detallereporte`
+-- Dumping data for table `detallereporte`
 --
 
 INSERT INTO `detallereporte` (`id`, `id_reporte`, `tipoRiesgo`, `descripcion`, `recomendacion`) VALUES
-(1, 3, 'Longitud', 'La contraseña es demasiado corta.', 'Aumenta el tamaño a 8 o más caracteres.'),
-(2, 3, 'Complejidad', 'Faltan letras mayúsculas.', 'Incluye al menos una letra en mayúscula (A-Z).'),
-(3, 3, 'Complejidad', 'No se detectaron números.', 'Agrega dígitos numéricos (0-9).'),
-(4, 3, 'Complejidad', 'Faltan caracteres especiales.', 'Usa símbolos como @, #, $, etc.'),
-(5, 9, 'Complejidad', 'Faltan caracteres especiales.', 'Usa símbolos como @, #, $, etc.');
+(1, 2, 'Longitud', 'La contraseña es demasiado corta.', 'Aumenta el tamaño a 8 o más caracteres.'),
+(2, 2, 'Complejidad', 'Faltan letras mayúsculas.', 'Incluye al menos una letra en mayúscula (A-Z).'),
+(3, 2, 'Complejidad', 'No se detectaron números.', 'Agrega dígitos numéricos (0-9).'),
+(4, 2, 'Complejidad', 'Faltan caracteres especiales.', 'Usa símbolos como @, #, $, etc.'),
+(5, 3, 'Longitud', 'La contraseña es demasiado corta.', 'Aumenta el tamaño a 8 o más caracteres.'),
+(6, 3, 'Complejidad', 'Faltan letras mayúsculas.', 'Incluye al menos una letra en mayúscula (A-Z).'),
+(7, 3, 'Complejidad', 'No se detectaron números.', 'Agrega dígitos numéricos (0-9).'),
+(8, 3, 'Complejidad', 'Faltan caracteres especiales.', 'Usa símbolos como @, #, $, etc.'),
+(9, 4, 'Longitud', 'La contraseña es demasiado corta.', 'Aumenta el tamaño a 8 o más caracteres.'),
+(10, 4, 'Complejidad', 'Faltan letras mayúsculas.', 'Incluye al menos una letra en mayúscula (A-Z).'),
+(11, 4, 'Complejidad', 'No se detectaron números.', 'Agrega dígitos numéricos (0-9).'),
+(12, 4, 'Complejidad', 'Faltan caracteres especiales.', 'Usa símbolos como @, #, $, etc.'),
+(13, 5, 'Longitud', 'La contraseña es demasiado corta.', 'Aumenta el tamaño a 8 o más caracteres.'),
+(14, 5, 'Complejidad', 'Faltan letras mayúsculas.', 'Incluye al menos una letra en mayúscula (A-Z).'),
+(15, 5, 'Complejidad', 'No se detectaron números.', 'Agrega dígitos numéricos (0-9).'),
+(16, 5, 'Complejidad', 'Faltan caracteres especiales.', 'Usa símbolos como @, #, $, etc.'),
+(17, 6, 'Longitud', 'La contraseña es demasiado corta.', 'Aumenta el tamaño a 8 o más caracteres.'),
+(18, 6, 'Complejidad', 'Faltan letras mayúsculas.', 'Incluye al menos una letra en mayúscula (A-Z).'),
+(19, 6, 'Complejidad', 'No se detectaron números.', 'Agrega dígitos numéricos (0-9).'),
+(20, 6, 'Complejidad', 'Faltan caracteres especiales.', 'Usa símbolos como @, #, $, etc.'),
+(21, 7, 'Longitud', 'La contraseña es demasiado corta.', 'Aumenta el tamaño a 8 o más caracteres.'),
+(22, 9, 'Complejidad', 'Faltan letras mayúsculas.', 'Incluye al menos una letra en mayúscula (A-Z).'),
+(23, 9, 'Complejidad', 'No se detectaron números.', 'Agrega dígitos numéricos (0-9).'),
+(24, 9, 'Complejidad', 'Faltan caracteres especiales.', 'Usa símbolos como @, #, $, etc.'),
+(25, 10, 'Longitud', 'La contraseña es demasiado corta.', 'Aumenta el tamaño a 8 o más caracteres.'),
+(26, 10, 'Complejidad', 'Faltan letras mayúsculas.', 'Incluye al menos una letra en mayúscula (A-Z).'),
+(27, 10, 'Complejidad', 'No se detectaron números.', 'Agrega dígitos numéricos (0-9).'),
+(28, 10, 'Complejidad', 'Faltan caracteres especiales.', 'Usa símbolos como @, #, $, etc.');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `intentologin`
+-- Table structure for table `intentologin`
 --
 
 CREATE TABLE `intentologin` (
@@ -59,24 +82,10 @@ CREATE TABLE `intentologin` (
   `resultado` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `intentologin`
---
-
-INSERT INTO `intentologin` (`id`, `id_usuario`, `fecha`, `resultado`) VALUES
-(1, 1, '2026-01-09 16:10:52', 1),
-(2, 1, '2026-01-09 16:11:07', 0),
-(3, 1, '2026-01-09 16:11:07', 1),
-(4, 1, '2026-01-09 16:11:13', 0),
-(5, 1, '2026-01-09 16:11:15', 0),
-(6, 1, '2026-01-09 16:11:16', 0),
-(7, 1, '2026-01-09 16:11:17', 0),
-(8, 1, '2026-01-09 16:11:18', 1);
-
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `reporte`
+-- Table structure for table `reporte`
 --
 
 CREATE TABLE `reporte` (
@@ -84,21 +93,31 @@ CREATE TABLE `reporte` (
   `id_usuario` int(11) DEFAULT NULL,
   `score` tinyint(4) DEFAULT NULL,
   `nivelRiesgo` enum('1','2','3') DEFAULT NULL,
-  `fechaGenerado` datetime DEFAULT NULL
+  `fechaGenerado` datetime DEFAULT NULL,
+  `passwordMask` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `reporte`
+-- Dumping data for table `reporte`
 --
 
-INSERT INTO `reporte` (`id`, `id_usuario`, `score`, `nivelRiesgo`, `fechaGenerado`) VALUES
-(3, 0, 0, '3', '2026-01-09 16:04:02'),
-(9, 1, 75, '2', '2026-01-09 16:12:14');
+INSERT INTO `reporte` (`id`, `id_usuario`, `score`, `nivelRiesgo`, `fechaGenerado`, `passwordMask`) VALUES
+(1, 5, 100, '1', '2026-06-24 17:17:44', NULL),
+(2, 5, 0, '3', '2026-06-24 17:17:49', NULL),
+(3, 5, 0, '3', '2026-06-24 17:24:38', NULL),
+(4, 5, 0, '3', '2026-06-24 17:40:46', NULL),
+(5, 5, 0, '3', '2026-06-24 17:43:30', NULL),
+(6, 5, 0, '3', '2026-06-24 17:43:31', NULL),
+(7, 5, 75, '2', '2026-06-24 17:43:35', NULL),
+(8, 5, 100, '1', '2026-06-24 17:43:57', NULL),
+(9, 5, 25, '3', '2026-06-24 18:02:13', 'e**********a'),
+(10, 5, 0, '3', '2026-06-24 18:03:33', 'a**a'),
+(11, 5, 100, '1', '2026-06-24 18:05:09', 'H****************************4');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario`
+-- Table structure for table `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -109,89 +128,92 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `usuario`
+-- Dumping data for table `usuario`
 --
 
 INSERT INTO `usuario` (`id`, `email`, `password`, `lastLogin`) VALUES
-(1, 'hola@gmail.com', '$2y$10$BJ84ubaY8geM5q7caukh.O6x.S3mwpW8KoO7QP7p53fKWhuO4deN.', '2026-01-09 16:11:18');
+(1, 'sda@as.s', '$2y$10$7ma8ftBvXSelCi9xeSyxFOzE2ZhShicbG6/8.J.6Rdk3gmbBIcjNK', NULL),
+(2, 'das@sd.a', '$2y$10$WOEWOKu.HfX98ctl9i.E9.LGeiqqXVoRneJDPJVA9SvHuhjsl3t36', NULL),
+(3, 'asd@a.a', '$2y$10$9nmbmzSUGuCxtJQIwGDc..8saxMLVzPHQzgpapamIW8QB4bXaHJEG', NULL),
+(5, 'das@asd.d', '$2y$10$heqca1sw55dWpHOsQAX0oewKybgayPUozajvRvGS4Oq22pH3KTlEm', NULL);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `detallereporte`
+-- Indexes for table `detallereporte`
 --
 ALTER TABLE `detallereporte`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_reporte` (`id_reporte`);
+  ADD KEY `fk_detalle_reporte` (`id_reporte`);
 
 --
--- Indices de la tabla `intentologin`
+-- Indexes for table `intentologin`
 --
 ALTER TABLE `intentologin`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_intentologin_usuario` (`id_usuario`);
 
 --
--- Indices de la tabla `reporte`
+-- Indexes for table `reporte`
 --
 ALTER TABLE `reporte`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_reporte_user` (`id_usuario`);
 
 --
--- Indices de la tabla `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `detallereporte`
+-- AUTO_INCREMENT for table `detallereporte`
 --
 ALTER TABLE `detallereporte`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT for table `intentologin`
+--
+ALTER TABLE `intentologin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `reporte`
+--
+ALTER TABLE `reporte`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `usuario`
+--
+ALTER TABLE `usuario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT de la tabla `intentologin`
---
-ALTER TABLE `intentologin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT de la tabla `reporte`
---
-ALTER TABLE `reporte`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT de la tabla `usuario`
---
-ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `detallereporte`
+-- Constraints for table `detallereporte`
 --
 ALTER TABLE `detallereporte`
   ADD CONSTRAINT `fk_detalle_reporte` FOREIGN KEY (`id_reporte`) REFERENCES `reporte` (`id`);
 
 --
--- Filtros para la tabla `intentologin`
+-- Constraints for table `intentologin`
 --
 ALTER TABLE `intentologin`
   ADD CONSTRAINT `fk_intentologin_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id`);
 
 --
--- Filtros para la tabla `reporte`
+-- Constraints for table `reporte`
 --
 ALTER TABLE `reporte`
   ADD CONSTRAINT `fk_reporte_user` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id`);

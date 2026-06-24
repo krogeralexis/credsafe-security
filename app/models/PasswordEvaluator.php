@@ -69,19 +69,20 @@ class PasswordEvaluator {
         ];
     }
 
-    public function guardarReporteCompleto($userId, $datosAnalisis) {
+    public function guardarReporteCompleto($userId, $datosAnalisis, $password) {
         try {
             // Iniciamos transacción para asegurar que se guarde todo o nada
             $this->db->beginTransaction();
 
             // 1. Insertar en la tabla 'reporte'
-            $queryR = "INSERT INTO reporte (id_usuario, score, nivelRiesgo, fechaGenerado) 
-                       VALUES (:uid, :score, :nivel, NOW())";
+            $queryR = "INSERT INTO reporte (id_usuario, score, nivelRiesgo, fechaGenerado, passwordMask) 
+                       VALUES (:uid, :score, :nivel, NOW(), :mask)";
             $stmtR = $this->db->prepare($queryR);
             $stmtR->execute([
                 ':uid'   => $userId,
                 ':score' => $datosAnalisis['score'],
-                ':nivel' => $datosAnalisis['nivel']
+                ':nivel' => $datosAnalisis['nivel'],
+                ':mask'  => $this->maskPassword($password)
             ]);
 
             // Obtener el ID del reporte que acabamos de crear
@@ -110,5 +111,12 @@ class PasswordEvaluator {
             error_log("Error al guardar reporte: " . $e->getMessage());
             return false;
         }
+    }
+
+    private function maskPassword($password)
+    {
+        $len = strlen($password);
+        if ($len <= 2) return str_repeat('*', $len);
+        return $password[0] . str_repeat('*', $len - 2) . $password[$len - 1];
     }
 }

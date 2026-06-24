@@ -1,10 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-=======
-<?php
-
->>>>>>> 42149af3b92ae19b50b875591ee4af7955b91936
 class Usuario {
     private $db;
 
@@ -26,25 +21,4 @@ class Usuario {
             ':pass'  => $hash
         ]);
     }
-<<<<<<< HEAD
-
-    // --- NUEVOS MÉTODOS ---
-
-    // Actualiza el campo lastLogin del usuario
-    public function updateLastLogin($id) {
-        $stmt = $this->db->prepare("UPDATE usuario SET lastLogin = NOW() WHERE id = :id");
-        return $stmt->execute([':id' => $id]);
-    }
-
-    // Registra el intento en la tabla intentologin
-    // $resultado: 1 para exitoso, 0 para fallido
-    public function registrarIntento($idUsuario, $resultado) {
-        $stmt = $this->db->prepare("INSERT INTO intentologin (id_usuario, fecha, resultado) VALUES (:uid, NOW(), :res)");
-        return $stmt->execute([
-            ':uid' => $idUsuario,
-            ':res' => $resultado
-        ]);
-    }
-=======
->>>>>>> 42149af3b92ae19b50b875591ee4af7955b91936
 }
